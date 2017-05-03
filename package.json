@@ -1,0 +1,14 @@
+{
+  "name": "apimegbot",
+  "version": "1.0.0",
+  "description": "API para MegBot",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rodrigo Ibarra",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.3"
+  }
+}
