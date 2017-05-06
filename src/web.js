@@ -15,7 +15,7 @@ var app = express()
 // Settings
 app.set('port', config.port)
 app.use(morgan("dev"))
-app.use(cors())
+//app.use(cors())
 app.use(bodyParser.json())
 
 app.use(function (req, res, next) {
