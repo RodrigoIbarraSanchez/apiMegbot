@@ -18,6 +18,13 @@ app.use(morgan("dev"))
 app.use(cors())
 app.use(bodyParser.json())
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-type, Authorization, x-access-token');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header('access-Control-Allow-Origin', '*');
+    next();
+});
+
 // Conectar a mongodb
 mongoose.connect(config.mongo_url, (err, res) => {
     if (err) {
