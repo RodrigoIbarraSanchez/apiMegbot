@@ -33,6 +33,8 @@ mongoose.connect(config.mongo_url, (err, res) => {
 // Rutas del API
 app.use("/api", apiRouter)
 
+
+
 // Error 404
 app.use(function(req, res, next){
     res.status(404)
