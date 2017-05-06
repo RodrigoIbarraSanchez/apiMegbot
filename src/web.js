@@ -33,6 +33,13 @@ mongoose.connect(config.mongo_url, (err, res) => {
 // Rutas del API
 app.use("/api", apiRouter)
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header('access-Control-Allow-Origin', '*');
+    next();
+});
+
 // Error 404
 app.use(function(req, res, next){
     res.status(404)
