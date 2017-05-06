@@ -1,4 +1,4 @@
 module.exports = {
-    port: 5000,
+    port: 4200,
     mongo_url: process.env.MONGODB_URI;
 }
