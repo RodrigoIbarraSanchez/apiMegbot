@@ -1,14 +1,14 @@
 // Dependencies
-var express = require('express')
-var morgan = require("morgan")
-var mongoose = require("mongoose")
-var bodyParser = require("body-parser")
-var path = require("path")
+var express = require('express');
+var morgan = require("morgan");
+var mongoose = require("mongoose");
+var bodyParser = require("body-parser");
+var path = require("path");
 var cors = require("cors");
 var unirest = require('unirest');
 
-var config = require('./config')
-var apiRouter = require("./infrastructure/routers/apiRouter")
+var config = require('./config');
+var apiRouter = require("./infrastructure/routers/apiRouter");
 
 var app = express()
 
