@@ -28,7 +28,7 @@ router.get('/clases', function(req, res) {
 
     clasesRepository.encuentraTodos(function(clases) {
         res.json({
-            status: "Todos los clases encontrados",
+            status: "Todas las clases encontradas",
             clases: clases
         })
     }, function(err) {
@@ -45,7 +45,7 @@ router.get('/clases/:id', function(req, res) {
 
     clasesRepository.encuentraMiclase(id, function(clase) {
         res.json({
-            status: "clase encontrado",
+            status: "clase encontrada",
             clase: clase
         })
     }, function(err) {
@@ -62,7 +62,7 @@ router.delete('/clases/:id', function (req, res) {
 
     clasesRepository.borraMiclase(id, function() {
         res.json({
-            status: "clase borrado"
+            status: "clase borrada"
         })
     }, function(err) {
         res.json({
