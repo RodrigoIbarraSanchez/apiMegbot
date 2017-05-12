@@ -6,7 +6,7 @@ var clasesRepository = require('../../domain/clasesRepository');
 
 router.post('/clases', function(req, res) {
 
-    //var data = req.body
+
     var className = req.body.className
 
     clasesRepository.createclase(className, function(clase) {
@@ -25,6 +25,8 @@ router.post('/clases', function(req, res) {
 })
 
 router.get('/clases', function(req, res) {
+    var data = req.body
+    console.log(data);
 
     clasesRepository.encuentraTodos(function(clases) {
         res.json({

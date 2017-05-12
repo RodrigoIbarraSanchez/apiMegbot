@@ -4,7 +4,7 @@ exports.createclase = function (className, onSuccess, onError) {
 
     var clase = new clasesEntity()
 
-    clase.name = className
+    clase.name = className;
     //clase.start = 11
     //clase.ends = 1
 
